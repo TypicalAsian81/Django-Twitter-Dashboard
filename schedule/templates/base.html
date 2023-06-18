@@ -1,0 +1,20 @@
+<!-- tweets/templates/base.html -->
+<html>
+  <head>
+    <title>Tweeter</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <h1><a href="{% url 'home' %}">Tweeter</a></h1>
+      </div>
+      <div class="nav-right">
+        <a href="{% url 'schedule_new' %}">Add Tweet</a>
+      </div>
+    </header>
+
+    <div>
+    {% block content %} {% endblock content %}
+    </div>
+  </body>
+</html>
