@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+        {% block title %}
+            <title>Auto Tweet Liker</title>
+        {% endblock %}
+
+        {% block content %}
+        <header>
+            <nav class="no-pad">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo left" style="margin-left: 10vw">Logo</a>
+                    <div style="margin-right: 15vw; position: relative">
+                        <ul id="nav-mobile" class="right">
+                            <li><a href="{% url 'index' %}" class="nav-links">Home</a></li>
+                            <li><a href="#" class="nav-links">Getting started</a></li>
+                            <li><a href="#" class="nav-links">Features</a></li>
+                            <li><a href="#" class="nav-links">Login & Signup</a></li>
+                            <li style="margin-left: 25vw"><a href="#"><i class = "material-icons tiny">search</i></a></li>
+                            <li><a href="#"><i class = "material-icons tiny">account_circle</i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <body>
+                {% block info %}
+                    <h2 style:"margin-left: 20%">User info</h2>
+                    <img src="{{user.profile_image_url}}">
+                    <h3>{{user.name}}</h3>
+                {% endblock %}
+            </body>
+        </header>
+        {% endblock %}

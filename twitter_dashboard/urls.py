@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from post import views
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('schedule.urls')), 
-    path('',views.index,name='index'),
+    # path('',views.index,name='index'),
+    path('',include('like.urls')),
 ]
